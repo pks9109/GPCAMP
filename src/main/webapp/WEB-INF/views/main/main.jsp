@@ -314,21 +314,27 @@ jQuery(document).ready(function() {
 			<li>
 				<img src="resources/main/gp_19.jpg" alt="방목장">
 				<div class="text">
-					<a>방목장</a>
-					<a>자유로운 방목장 안에서 경주마들이 휴식을 취하며 힐링을 합니다. </a>
+					<div class="text02">
+						<a>방목장</a>
+						<a>자유로운 방목장 안에서 경주마들이 휴식을 취하며 힐링을 합니다. </a>
+					</div>
 				</div>
 			</li>
 			<li>
 				<img src="resources/main/gp_20.jpg" alt="기승 훈련">
 				<div class="text">
-					<a>기승 훈련</a>
-					<a>숙련된 트레이너의 직접 기승 훈련을 통하여 주법훈련을 강화하고 있습니다.</a>
+					<div class="text02">
+						<a>기승 훈련</a>
+						<a>숙련된 트레이너의 직접 기승 훈련을 통하여 주법훈련을 강화하고 있습니다.</a>
+					</div>
 				</div>
 			<li>
 				<img src="resources/main/gp_21.jpg" alt="특화된 급식">
 				<div class="text">
-					<a>특화된 급식</a>
-					<a>각 개체의 특성 및 부족한 분에 대한 집중적인 보양을 통한 배식으로 균형적인 체격 및 체력형성·유지를 위하여 노력하고 있습니다.</a>
+					<div class="text02">
+						<a>특화된 급식</a>
+						<a>각 개체의 특성 및 부족한 분에 대한 집중적인 보양을 통한 배식으로 균형적인 체격 및 체력형성·유지를 위하여 노력하고 있습니다.</a>
+					</div>
 				</div>
 			</li>
 		</ul>

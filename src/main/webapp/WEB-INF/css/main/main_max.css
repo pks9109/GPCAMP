@@ -63,6 +63,8 @@
 	.basic .width03 li a{	margin-top:8%;	}
 	.insta .width03 li img{	width: 90%;	}
 	.location .map{height: 300px;}
+	
+	.sectio .spec .width03 li .text a:first-child{font-size: 1.7em;}
 }
 @media screen and (max-width: 654px) {
 	.busi .width03 li img{float: none;}
@@ -84,6 +86,9 @@
 	.menu .nav li{width: auto;}
 	.menu .nav li:last-child {	position: absolute;	top: 10px;	right: 0;	}
 	.c-quick img{width: 100px;}
+	
+	.sectio .spec .width03 li .text{	margin: 0 auto;	padding:0;	width:97%;	position: relative;	height: auto;	visibility: visible;	overflow: hidden;	top: 0;	transform:none;	}
+	.sectio .spec .width03 li .text02{	position: relative;	margin: 0 auto;	margin-top: 2%;	margin-bottom: 2%;	}
 }
 @media screen and (max-width: 479px) {
 	.menu .nav {width: 100%;}
