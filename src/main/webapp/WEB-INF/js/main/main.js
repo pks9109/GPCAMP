@@ -11,10 +11,7 @@ $(document).ready(function() {
     
     /*메인으로 아이콘*/
     $(window).scroll(function() {
-    	var scrollBottom = $("body").height()-600;
-    	console.log(scrollBottom);
-    	console.log($(this).scrollTop());
-
+    	var scrollBottom = $("body").height()-800;
     	if($(this).scrollTop() >= 400){
     		$(".topBut").show();
     		if($(this).scrollTop() >= scrollBottom){
