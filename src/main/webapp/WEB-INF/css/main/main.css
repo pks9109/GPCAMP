@@ -13,6 +13,7 @@ body{margin: 0;	padding: 0;	font-size: 25px;	font-family: "맑은 고딕"}
 .menu .nav li a{	text-decoration: none; color: black;	}
 
 .imgSiler{margin-top: 50px;	position: relative;	overflow: hidden;}
+.imgSiler .bxslider li a{	position: absolute;	color: yellow;	top: 43%;	width: 100%;	text-align: center;	font-size: 7vw;	}
 
 .c-quick{position: fixed;	top: 10%;	right: 10px;	z-index: 999;}
 .c-quick img{border:0;}

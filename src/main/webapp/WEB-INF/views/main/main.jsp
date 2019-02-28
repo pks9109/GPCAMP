@@ -11,8 +11,9 @@
 <script type="text/javascript">
 $(function(){
 	$('.bxslider').bxSlider({
-	mode: 'fade',
-	captions: true
+		auto: true,
+		speed: 500,
+		mode:'fade',
 	});
 });
 
@@ -176,8 +177,14 @@ jQuery(document).ready(function() {
 	
 	<div class="imgSiler">
 		<ul class="bxslider">
-			<li><img src="resources/main/banner_01.jpg" alt="Healthy&Run"></li>
-			<li><img src="resources/main/banner_02.jpg" alt="Healthy&Run"></li>
+			<li>
+				<a>Healthy &amp; Run</a>
+				<img src="resources/main/banner_01.jpg" alt="Healthy&Run">
+			</li>
+			<li>
+				<a>Healthy &amp; Run</a>
+				<img src="resources/main/banner_02.jpg" alt="Healthy&Run">
+			</li>
 		</ul>
 	</div>
 </div>

@@ -7,10 +7,22 @@ $(document).ready(function() {
         event.preventDefault();
         $('html,body').animate({scrollTop:0}, 500);
      });
+    $(".topBut").hide();
     
     /*메인으로 아이콘*/
     $(window).scroll(function() {
-	  if($(this).scrollTop() >= 400) $(".topBut").show();
-	  else $(".topBut").hide();
+    	var scrollBottom = $("body").height()-600;
+    	console.log(scrollBottom);
+    	console.log($(this).scrollTop());
+
+    	if($(this).scrollTop() >= 400){
+    		$(".topBut").show();
+    		if($(this).scrollTop() >= scrollBottom){
+    			$(".topBut").hide();
+    		}
+    	}
+	  	else $(".topBut").hide();
+	  
+	  
     });
 });
