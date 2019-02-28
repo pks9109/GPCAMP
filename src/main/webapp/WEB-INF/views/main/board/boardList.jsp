@@ -4,7 +4,6 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-	
 	<div class="title">
 		<a>공지사항</a>
 	</div>
@@ -155,47 +154,49 @@
 		        var pingingView = $("#paging");
 		        
 		        var html = "";
-		        	if(prev == 0){
-		        	html +=
-		        		'<li>' +
-		        		'<img alt="첫페이지" src="resources/main/bt_08.jpg" id="start" start_page="'+1+'">' +
-		    			'</li>' +
-		    			'<li>' +
-		        		'<img alt="이전페이지" src="resources/main/bt_09.jpg" id="prev" start_page="'+prev+'">' +
-		    			'</li>';
-		        	}else{
-		        	html +=
-			        	'<li>' +
-		        		'<img alt="첫페이지" src="resources/main/bt_08.jpg" name="page_move" id="start" start_page="'+1+'" style="cursor:pointer;">' +
-		    			'</li>' +
-		    			'<li>' +
-		        		'<img alt="이전페이지" src="resources/main/bt_09.jpg" name="page_move" id="prev" start_page="'+prev+'" style="cursor:pointer;">' +
-		    			'</li>';
-					}		
-				        for(var i=first; i <= last; i++){
-				        	if (startPage == i) {
-				        		html += '<li><a style="color:lightseagreen;" id="'+i+'" name="page_move" start_page="'+i+'" disabled>'+ i +'</a></li>';
-				        	}else {
-			        			html += '<li><a id="page_num" name="page_move" start_page="'+i+'" style="cursor:pointer;">'+ i +'</a></li>';	
-			        		}
-				        }
+		        
+	        	if(prev == 0){
+	        	html +=
+	        		'<li>' +
+	        		'<img alt="첫페이지" src="resources/main/bt_08.jpg" id="start" start_page="'+1+'">' +
+	    			'</li>' +
+	    			'<li>' +
+	        		'<img alt="이전페이지" src="resources/main/bt_09.jpg" id="prev" start_page="'+prev+'">' +
+	    			'</li>';
+	        	}else{
+	        	html +=
+		        	'<li>' +
+	        		'<img alt="첫페이지" src="resources/main/bt_08.jpg" name="page_move" id="start" start_page="'+1+'" style="cursor:pointer;">' +
+	    			'</li>' +
+	    			'<li>' +
+	        		'<img alt="이전페이지" src="resources/main/bt_09.jpg" name="page_move" id="prev" start_page="'+prev+'" style="cursor:pointer;">' +
+	    			'</li>';
+				}
+		        	
+		        for(var i=first; i <= last; i++){
+		        	if (startPage == i) {
+		        		html += '<li><a style="color:lightseagreen;" id="'+i+'" name="page_move" start_page="'+i+'" disabled>'+ i +'</a></li>';
+		        	}else {
+	        			html += '<li><a id="page_num" name="page_move" start_page="'+i+'" style="cursor:pointer;">'+ i +'</a></li>';	
+	        		}
+		        }
+		        
 		    	if(last < totalPage){
-			        	html +=
-		        		'<li>' +
-		        		'<img alt="첫페이지" src="resources/main/bt_11.jpg" name="page_move" id="next" start_page="'+next+'" style="cursor:pointer;">' + 
-		    			'</li>' +
-		        		'<li>' +
-		        		'<img alt="이전페이지" src="resources/main/bt_10.jpg" name="page_move" id="end" start_page="'+totalPage+'" style="cursor:pointer;">' +
-		    			'</li>';
+		        	html +=
+	        		'<li>' +
+	        		'<img alt="첫페이지" src="resources/main/bt_11.jpg" name="page_move" id="next" start_page="'+next+'" style="cursor:pointer;">' + 
+	    			'</li>' +
+	        		'<li>' +
+	        		'<img alt="이전페이지" src="resources/main/bt_10.jpg" name="page_move" id="end" start_page="'+totalPage+'" style="cursor:pointer;">' +
+	    			'</li>';
 		    	}else if(last == totalPage){
-	    		
 		    		html +=
-		        		'<li>' +
-		        		'<img alt="첫페이지" src="resources/main/bt_11.jpg" id="next" start_page="'+next+'">' + 
-		    			'</li>' +
-		        		'<li>' +
-		        		'<img alt="이전페이지" src="resources/main/bt_10.jpg" id="end" start_page="'+totalPage+'">' +
-		    			'</li>';
+	        		'<li>' +
+	        		'<img alt="첫페이지" src="resources/main/bt_11.jpg" id="next" start_page="'+next+'">' + 
+	    			'</li>' +
+	        		'<li>' +
+	        		'<img alt="이전페이지" src="resources/main/bt_10.jpg" id="end" start_page="'+totalPage+'">' +
+	    			'</li>';
 	    		}
 		    	
 		        $("#paging").append(html);    // 페이지 목록 생성
