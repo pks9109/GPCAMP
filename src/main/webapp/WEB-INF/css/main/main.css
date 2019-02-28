@@ -92,7 +92,7 @@ filter:gray;/*IE 6-9*/
 .number li img{width: 25px;}
 
 .location{width: 90%; margin: 0 auto;}
-.location .map img, .location .map{width: 100%;}
+.location .map img, .location .map{width: 100%;	overflow: hidden;}
 .location .map{	height: 500px;	}
 .location ul{width: 100%;	list-style: none;	padding: 0;}
 .location ul img{width: 20px;	padding: 5px;}

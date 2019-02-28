@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta http-equiv="X-UA-Compatible" content="IE=10" />
 <meta name="viewport" content="width=device-width, user-scalable=no">
 <script src="js/bootstrap,jquery/jquery.js"></script>
 <script src="js/bootstrap,jquery/jquery-3.3.1.min.js"></script>
