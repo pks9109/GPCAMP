@@ -212,7 +212,7 @@ jQuery(document).ready(function() {
 		</div>
 		<ul class="width03">
 			<li>
-				<img src="resources/main/gp_02.jpg">
+				<img src="resources/main/gp_02.png">
 				<div class="busiColor01">
 					<a>휴양</a>
 				</div>
@@ -221,7 +221,7 @@ jQuery(document).ready(function() {
 				</div>
 			</li>
 			<li>
-				<img src="resources/main/gp_03.jpg">
+				<img src="resources/main/gp_03.png">
 				<div class="busiColor02">
 					<a>체계적인 전문관리</a>
 				</div>
@@ -230,7 +230,7 @@ jQuery(document).ready(function() {
 				</div>
 			</li>
 			<li>
-				<img src="resources/main/gp_04.jpg">
+				<img src="resources/main/gp_04.png">
 				<div class="busiColor03">
 					<a>차별화</a>
 				</div>
@@ -297,11 +297,11 @@ jQuery(document).ready(function() {
 		</ul>
 		
 		<ul class="width03">
-			<li><img src="resources/main/gp_16.jpg">
+			<li><img src="resources/main/gp_16.png">
 			<a>정기 건강검진</a></li>
-			<li><img src="resources/main/gp_17.jpg">
+			<li><img src="resources/main/gp_17.png">
 			<a>매주 장체 및 말굽 관리</a></li>
-			<li><img src="resources/main/gp_18.jpg">
+			<li><img src="resources/main/gp_18.png">
 			<a>즐거운 힐링</a></li>
 		</ul>
 	</div>
@@ -383,12 +383,12 @@ jQuery(document).ready(function() {
 					infowindow.open(map, marker); 
 				</script>
 	<ul>
-		<li><img src="resources/main/gp_22.jpg"><a class="bold">경기도 화성시 서신면 궁평항로 128 (궁평리 376-6)</a></li>
+		<li><img src="resources/main/gp_22.png"><a class="bold">경기도 화성시 서신면 궁평항로 128 (궁평리 376-6)</a></li>
 	</ul>
 	<ul class="width03">
-		<li><img src="resources/main/gp_23.jpg"><a>1588-1111(미정)</a></li>
-		<li><img src="resources/main/gp_24.jpg"><a>031-357-7191</a></li>
-		<li><img src="resources/main/gp_25.jpg"><a>gpcamp@gpcamp.com</a></li>
+		<li><img src="resources/main/gp_23.png"><a>1588-1111(미정)</a></li>
+		<li><img src="resources/main/gp_24.png"><a>031-357-7191</a></li>
+		<li><img src="resources/main/gp_25.png"><a>gpcamp@gpcamp.com</a></li>
 	</ul>
 </div>
 

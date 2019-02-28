@@ -7,7 +7,7 @@ body{margin: 0;	padding: 0;	font-size: 25px;	font-family: "맑은 고딕"}
 .gpcamp{overflow: hidden;}
 .menu{position: fixed;	overflow: hidden;	z-index: 999;	width: 100%;	background: white;}
 .menu .logo{ float: left;	height: 63px;}
-.menu .logo img{	height: 100%;	}
+.menu .logo img{	height: 65%;	padding: 4%;	}
 .menu .nav{	float: right;	padding:0;	width: auto;	margin: 18 0;	}
 .menu .nav li{float: left;	list-style: none;	padding: 0 10px;	font-size: 20px;}
 .menu .nav li a{	text-decoration: none; color: black;	}
@@ -51,7 +51,7 @@ body{margin: 0;	padding: 0;	font-size: 25px;	font-family: "맑은 고딕"}
 
 .sectio{width: 90%;	margin: 0 auto; position: relative;}
 .sectio	.width03 li a{display: block; width: 40%; float: right;	margin-top: 25%;	font-weight: 600;}
-.sectio	.width03 li img{	width: 60%;	width: 60%;	}
+.sectio	.width03 li img{	width: 50%;	}
 .sectio	.width02 li{width: 49%;}
 .sectio	.width02 li:first-child {	margin-right: 2%;}
 .basic .title2{	margin-top: 0;	}
@@ -93,12 +93,14 @@ filter:gray;/*IE 6-9*/
 
 .location{width: 90%; margin: 0 auto;}
 .location .map img, .location .map{width: 100%;}
+.location .map{	height: 500px;	}
 .location ul{width: 100%;	list-style: none;	padding: 0;}
-.location ul img{width: 45px;}
+.location ul img{width: 20px;	padding: 5px;}
 .location ul a{position: relative;	top: -10px;}
 .location .width03 li{text-align: left;}
 .bold{font-weight: 700;}
 .location ul:last-child{	margin-bottom: 7%;	}
+.location .width03 li img{	width: 40px; padding: 0;	}
 
 .footer{background: #333333;	overflow: hidden;	height: 90px; font-size: 12px; text-align: center; color: white;	line-height: 2em;	padding-top: 20px;}
 .footer .text {	position: relative;	top: -5px;	padding-left: 15px;}

@@ -18,9 +18,9 @@
 <link rel="stylesheet" href="css/main/main.css">
 <link rel="stylesheet" href="css/main/main_max.css">
 <script type="text/javascript"> 
-var host = location.host.toLowerCase(); 
-var currentAddress = location.href; 
-if (host.indexOf("www")== -1) { 
-	currentAddress = currentAddress.replace("//","//www."); 
-	location.href = currentAddress; } 
+// var host = location.host.toLowerCase(); 
+// var currentAddress = location.href; 
+// if (host.indexOf("www")== -1) { 
+// 	currentAddress = currentAddress.replace("//","//www."); 
+// 	location.href = currentAddress; } 
 </script>
