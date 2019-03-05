@@ -18,9 +18,12 @@
 <link rel="stylesheet" href="css/main/main.css">
 <link rel="stylesheet" href="css/main/main_max.css">
 <script type="text/javascript"> 
+
+<!-- 사이트 앞에 www붙이기 기존에 www 있으면 안붙임, 로컬테스트 시에는 작동 안함 실제 war배포 시 주석해제 하고 사용 할 것!! -->
 // var host = location.host.toLowerCase(); 
 // var currentAddress = location.href; 
 // if (host.indexOf("www")== -1) { 
 // 	currentAddress = currentAddress.replace("//","//www."); 
 // 	location.href = currentAddress; } 
+
 </script>

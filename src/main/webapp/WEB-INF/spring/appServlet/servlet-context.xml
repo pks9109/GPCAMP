@@ -55,8 +55,6 @@
        		
 			<!-- intercepter 제외 -->
             <exclude-mapping path="/main"/>
-            <exclude-mapping path="/main2"/>
-            <exclude-mapping path="/main_test"/>
             <exclude-mapping path="/boardList"/>
             <exclude-mapping path="/boardFileDown"/> 
             <exclude-mapping path="/boardHit"/>

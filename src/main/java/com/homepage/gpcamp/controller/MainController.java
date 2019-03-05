@@ -1,7 +1,5 @@
 package com.homepage.gpcamp.controller;
 
-import java.awt.Dimension;
-import java.awt.Toolkit;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -12,7 +10,6 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,7 +24,7 @@ import com.homepage.gpcamp.service.BoardFileService;
 import com.homepage.gpcamp.service.BoardService;
 
 @Controller
-public class CmsController {
+public class MainController {
 	@Autowired
     BoardService boardService;
 	@Autowired
@@ -38,22 +35,6 @@ public class CmsController {
 		public String main(){
 			
 			return "main/main";
-			
-		}
-		
-		//궁평캠프 메인화면
-				@RequestMapping(value = "/main2") 
-				public String main2(){
-					
-					return "main/main_ori";
-					
-				}
-		
-		//궁평캠프 메인화면 TEST
-		@RequestMapping(value = "/main_test") 
-		public String main_test(){
-			
-			return "main/main_test";
 			
 		}
 		
@@ -99,8 +80,6 @@ public class CmsController {
 			return "main/board/boardList";
 		}
 		
-		// ------------------------------------------------------------------------------------------------------------------	
-
 		//공통 CMS 게시판 다운로드 액션
 		@RequestMapping("/boardFileDown")
 	    private void boardFileDown(Board board, String file_name, String file_seq, String board_division, HttpServletRequest request, HttpServletResponse response) throws Exception{
@@ -111,7 +90,7 @@ public class CmsController {
 				 /*상대경로 */
 	   			
 	   			
-//			!!!!!!필수!!!!!!!!!호스팅 업로드 경로로 바꿔줘야함 프로젝트 이름 cmsinterlink
+//			!!!!!!필수!!!!!!!!!호스팅 업로드 경로로 맞춰줘야함 프로젝트 이름 cmsinterlink
 //			↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 	   			
 //			String file_path = request.getSession().getServletContext().getRealPath("/");  <-----이건 해당 war안에 상대경로 구하는 소스
@@ -187,13 +166,13 @@ public class CmsController {
 	   	}
 		
 		//공지사항 조회 수 +1씩
-			@RequestMapping(value = "/boardHit", method = RequestMethod.POST)
-			@ResponseBody
-			public int boardHit(int board_seq) {
+		@RequestMapping(value = "/boardHit", method = RequestMethod.POST)
+		@ResponseBody
+		public int boardHit(int board_seq) {
 
-				int result = boardService.board_hit(board_seq);
-				
-				return result;
-			}
+			int result = boardService.board_hit(board_seq);
+			
+			return result;
+		}
 		
 	}

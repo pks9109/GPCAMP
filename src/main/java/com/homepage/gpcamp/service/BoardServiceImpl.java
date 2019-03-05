@@ -18,24 +18,22 @@ public class BoardServiceImpl implements BoardService{
 	
 
 	@Override
-	public Board board_read(Board board) {
-		
+	public Board board_read(Board board) {							//게시판 상세보기
 		return boardDao.board_read(board);
-		
 	}
 
 	@Override
-	public List<Board> board_list(Map<String, Object> paramMap) {
+	public List<Board> board_list(Map<String, Object> paramMap) {	//게시판 목록
 		return boardDao.board_list(paramMap);
 	}
 
 	@Override
-	public int board_cnt(Map<String, Object> paramMap) {
+	public int board_cnt(Map<String, Object> paramMap) {			//게시물 개 수 조회
 		return boardDao.board_cnt(paramMap);
 	}
 	
 	@Override
-	public int board_hit(int board_seq) {
+	public int board_hit(int board_seq) {							//클릭 시 게시물 +1씩 조회수 증가
 		return boardDao.board_hit(board_seq);
 	}
 	

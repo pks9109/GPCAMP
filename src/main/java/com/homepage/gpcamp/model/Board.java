@@ -25,6 +25,7 @@ public class Board {
 	private String file_path;     		//파일 경로 , 		file_tb에서 파일명 가져와서 뿌려줌
 	private String file_hit; 			//파일 다운로드 수 ,  file_tb에서 파일명 가져와서 뿌려줌
 	private String file_cnt; 			//게시글에 해당되는 파일 수 ,  file_tb에서 파일명 가져와서 뿌려줌 
+	
 	public int getBoard_seq() {
 		return board_seq;
 	}

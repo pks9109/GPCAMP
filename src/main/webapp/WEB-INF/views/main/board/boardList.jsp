@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
@@ -35,6 +34,7 @@
 				<th>날짜</th>
 				<th>조회수</th>
 			</tr>
+		<!-- 게시글이 존재 하지 않으면 미 출력 -->
 		<c:if test="${fn:length(boardList) == 0}">	
 			<tr>
 			<td colspan="4">
@@ -42,6 +42,7 @@
 			</td>
 			</tr>
 		</c:if>
+			<!-- 리스트 불러와서 for문 돌림 -->
 			<c:forEach var="boardList" items="${boardList}" varStatus="status" >
 			<tr>
 				<c:if test="${boardList.board_notice == 0}">
@@ -128,19 +129,21 @@
 		    var next = "";
 		    var prev = "";
 		    function paging(totalData, dataPerPage, pageCount, currentPage){
-		    	var startPage = $('#startPageList').val(); //현재 페이지
+		    	
+		    	var startPage = $('#startPageList').val(); 			// 현재 페이지
 		        console.log("currentPage : " + startPage);
+		    	
+		        var totalPage = Math.ceil(totalData / dataPerPage);   // 총 페이지 수
+		        console.log("totalPage : " + totalPage);
 		        
-		        var totalPage = Math.ceil(totalData/dataPerPage);    // 총 페이지 수
-		        var pageGroup = Math.ceil(startPage/pageCount);    // 페이지 그룹
-
-
+		        var pageGroup = Math.ceil(startPage / pageCount);    	// 페이지 그룹
 		        console.log("pageGroup : " + pageGroup);
 		        
 		        var last = pageGroup * pageCount;    // 화면에 보여질 마지막 페이지 번호
 		        if(last > totalPage){
 		            last = totalPage;
 		        }
+		        
 		        var first = last - (pageCount-1);    // 화면에 보여질 첫번째 페이지 번호
 		        
 		        var next = last+1;
@@ -155,6 +158,8 @@
 		        
 		        var html = "";
 		        
+		        
+				// 첫 페이지 | 이전 페이지
 	        	if(prev == 0){
 	        	html +=
 	        		'<li>' +
@@ -172,7 +177,8 @@
 	        		'<img alt="이전페이지" src="resources/main/bt_09.jpg" name="page_move" id="prev" start_page="'+prev+'" style="cursor:pointer;">' +
 	    			'</li>';
 				}
-		        	
+				
+		        // 카운터 번호 출력	
 		        for(var i=first; i <= last; i++){
 		        	if (startPage == i) {
 		        		html += '<li><a style="color:lightseagreen;" id="'+i+'" name="page_move" start_page="'+i+'" disabled>'+ i +'</a></li>';
@@ -181,6 +187,7 @@
 	        		}
 		        }
 		        
+		        //다음 페이지 | 맨 뒷 페이지
 		    	if(last < totalPage){
 		        	html +=
 	        		'<li>' +
@@ -200,6 +207,10 @@
 	    		}
 		    	
 		        $("#paging").append(html);    // 페이지 목록 생성
+		        
+// 		        -----------------------------------------------------
+// 		        ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓필요 시 해제, ajax말고 일반 페이지 이동시 사용
+		        
 // 	            $("#paging a." + startPage).addClass("focus");    // 현재 페이지 표시
 // 	            $("#paging a#" + startPage).addClass("focus");    // 현재 페이지 표시
 		        
@@ -217,7 +228,7 @@
 		            
 // 		            paging(totalData, dataPerPage, pageCount, selectedPage);
 // 		        });
-		                                           
+// 		        ----------------------------------------------------- 
 		                                           
 		    }
 		    
@@ -231,7 +242,7 @@
 		//파일 다운로드
 		function downFile(fileName){
 			var conPath = window.location.pathname.substring(0, window.location.pathname.indexOf("/",2)); //contextpath 구함	
-			var file_name = fileName.split('*');
+			var file_name = fileName.split('*');	//쿼리 구분자 날려서 필요 한 부분 get방식으로 뽑아서 씀
 			if(file_name[1] == "notice"){
 				location.href = conPath + "/boardFileDown?file_name="+encodeURI(file_name[0])+"&board_division="+file_name[1]+"&file_seq="+file_name[2];
 			}

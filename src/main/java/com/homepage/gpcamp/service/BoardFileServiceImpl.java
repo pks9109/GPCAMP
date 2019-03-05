@@ -18,12 +18,12 @@ public class BoardFileServiceImpl implements BoardFileService{
 	private BoardFileDao boardFileDao;
 
 	@Override
-	public List<BoardFile> file_list(Map<String, Object> paramMap) {
+	public List<BoardFile> file_list(Map<String, Object> paramMap) {		//파일 목록
 		return boardFileDao.file_list(paramMap);
 	}
 
 	@Override
-	public void file_hit(String file_seq) {
+	public void file_hit(String file_seq) {									//파일 다운로드 클릭 시 +1 씩 증가
 		boardFileDao.file_hit(file_seq);
 	}
 

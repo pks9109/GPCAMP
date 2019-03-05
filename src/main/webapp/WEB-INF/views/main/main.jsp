@@ -349,6 +349,7 @@ jQuery(document).ready(function() {
 </div>
 
 <div class="depth" id="depth">
+<!-- ajax로 게시판 부분만 가져옴 | id = noticeList -->
 <div class="container" id="noticeList">
 </div>
 </div>
@@ -365,7 +366,7 @@ jQuery(document).ready(function() {
 				<script>
 					var container = document.getElementById('map');
 					var options = {
-						center: new daum.maps.LatLng(37.1262001, 126.6891238),
+						center: new daum.maps.LatLng(37.1262452,126.6924907),
 						level: 3
 					};
 					
@@ -373,7 +374,7 @@ jQuery(document).ready(function() {
 
 					
 					// 마커가 표시될 위치입니다 
-					var markerPosition  = new daum.maps.LatLng(37.1262001, 126.6891238); 
+					var markerPosition  = new daum.maps.LatLng(37.1262452,126.6924907); 
 
 					// 마커를 생성합니다
 					var marker = new daum.maps.Marker({
@@ -383,8 +384,8 @@ jQuery(document).ready(function() {
 					// 마커가 지도 위에 표시되도록 설정합니다
 					marker.setMap(map);
 
-					var iwContent = '<div style="padding:5px;">궁평캠프 <br><a href="http://map.daum.net/link/map/궁평캠프,37.1262001, 126.6891238" style="color:blue" target="_blank">큰지도보기</a> <a href="http://map.daum.net/link/to/궁평캠프,37.1262001, 126.6891238" style="color:blue" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-					    iwPosition = new daum.maps.LatLng(37.1262001, 126.6891238); //인포윈도우 표시 위치입니다
+					var iwContent = '<div style="padding:5px;">궁평캠프 <br><a href="http://map.daum.net/link/map/궁평캠프,37.1262452,126.6924907" style="color:blue" target="_blank">큰지도보기</a> <a href="http://map.daum.net/link/to/궁평캠프,37.1262452,126.6924907" style="color:blue" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+					    iwPosition = new daum.maps.LatLng(37.1262452,126.6924907); //인포윈도우 표시 위치입니다
 
 					// 인포윈도우를 생성합니다
 					var infowindow = new daum.maps.InfoWindow({

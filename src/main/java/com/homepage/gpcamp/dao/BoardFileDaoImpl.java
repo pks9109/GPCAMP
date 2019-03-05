@@ -18,12 +18,12 @@ public class BoardFileDaoImpl implements BoardFileDao {
     SqlSession SqlSession;
 
 	@Override
-	public List<BoardFile> file_list(Map<String, Object> paramMap) {
+	public List<BoardFile> file_list(Map<String, Object> paramMap) {		//파일 목록 출력
 		return SqlSession.selectList("boardFiles.file_list", paramMap);
 	}
 
 	@Override
-	public void file_hit(String file_seq) {
+	public void file_hit(String file_seq) {									//파일 다운로드 클릭 시 +1씩 증가
 		SqlSession.update("boardFiles.file_hit", file_seq);
 		
 	}
