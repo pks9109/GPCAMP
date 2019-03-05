@@ -55,7 +55,7 @@
                 <c:if test="${boardList.board_notice != 0}">
                 <td class="groundGrean"><a>공지</a></td>
                 </c:if>
-				<td><a href="#signUp${status.index}" name="tSeq" id="${boardList.board_seq}" >${boardList.board_title}</a></td>
+				<td><a href="#signUp${status.index}" name="tSeq" id="${boardList.board_seq}" class="boardListTitleA" >${boardList.board_title}</a></td>
 				<td>${boardList.board_register_date}</td>
 				<td>${boardList.board_hit}</td>
 			</tr>
@@ -78,7 +78,7 @@
 						<c:set var="ext" value="${fn:substringAfter(boardlist, '**')}" />
 						<br>
 						<c:if test="${ext == '.jpg' || ext == '.bmp' || ext == '.gif' || ext == '.png' || ext == '.jpeg'}">
-						<img style="max-width: 100%; height: auto;margin-left: auto; margin-right: auto; display: block; " alt="사진" src="http://gpcamp1.cafe24.com/cmsInterlink/resources/uploadFile/notice/${fn:substringBefore(boardlist, '*')}" />
+						<img alt="사진" src="http://gpcamp1.cafe24.com/cmsInterlink/resources/uploadFile/notice/${fn:substringBefore(boardlist, '*')}" />
 						</c:if> 
 						<br>									
 						</c:forEach>
@@ -235,7 +235,25 @@
 		    $(document).ready(function(){        
 		        paging(totalData, dataPerPage, pageCount, 1);		        
 		    });
-		   
+		    
+		    
+		    /* 모달창 띄었을때 body 스크롤 방지 */
+		    $('.boardListTitleA').click(function(){
+		       	var visibility = $( ".popup" ).css( "visibility" );
+		       	if(visibility == "hidden") {
+		       		console.log("hidden");
+		       		$('body').css({overflow:'hidden'});
+		       	}else{
+		       		console.log("visibility");
+		       		$('body').css({overflow:'visible'});
+		       	}
+		       });
+		    $('.close').click(function(){
+		    	$('body').css({overflow:'visible'});
+		    });
+		    $('.overlay').click(function(){
+		    	$('body').css({overflow:'visible'});
+		    });
 
 		});
 		

@@ -36,6 +36,7 @@
 	
 	.insta ul li{	width: 100%;	margin-bottom: 3%;	}
 	.insta .width03 li:nth-child(2){margin-top: 0;}
+	.insta strong{	font-size: 1.5em;	}
 	
 	.basic .width03 li{	width: 100%;	}
 	.basic .width03 li img{max-width: 100px;	float: left;	margin:1%;}

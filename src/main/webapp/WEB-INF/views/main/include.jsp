@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <meta http-equiv="X-UA-Compatible" content="IE=10" />
 <meta name="viewport" content="width=device-width, user-scalable=no">
+<!-- 자동링크 없애기 -->
+<meta name="format-detection" content="telephone=no, address=no, email=no">
 <script src="js/bootstrap,jquery/jquery.js"></script>
 <script src="js/bootstrap,jquery/jquery-3.3.1.min.js"></script>
 <script src="<c:url value='js/common.js'/>" charset="utf-8"></script>

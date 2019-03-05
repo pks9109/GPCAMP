@@ -19,7 +19,5 @@ $(document).ready(function() {
     		}
     	}
 	  	else $(".topBut").hide();
-	  
-	  
     });
 });
