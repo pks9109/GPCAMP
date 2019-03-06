@@ -13,6 +13,8 @@ $(function(){
 	$('.bxslider').bxSlider({
 		auto: true,
 		speed: 500,
+		pause: 1500,
+		controls: false,
 		mode:'fade',
 	});
 });
